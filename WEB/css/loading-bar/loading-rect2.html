@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading RECT Circle</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      .loading-box > * {
+        border-radius: 10px;
+      }
+
+      .loading-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .loading-box > p {
+        position: absolute;
+        font-weight: bold;
+        color: rgb(105, 105, 105);
+      }
+
+      .loading-box > .loading-rect {
+        border: 1px solid orange;
+        background-color: #ffdba7;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: loading-rotate 2s infinite linear;
+      }
+
+      .loading-box > .loading-ellipse-1 {
+        border: 1px solid orange;
+        background-color: #ffe9c2;
+        width: 75px;
+        height: 75px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: loading-rotate 2s infinite linear;
+      }
+
+      .loading-box > .loading-ellipse-2 {
+        border: 1px solid orange;
+        background-color: #fffad5;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: loading-rotate 2s infinite linear;
+      }
+
+      @keyframes loading-rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-box">
+      <div class="loading-rect"></div>
+      <div class="loading-ellipse-1"></div>
+      <div class="loading-ellipse-2"></div>
+      <p>LOADING...</p>
+    </div>
+  </body>
+</html>
