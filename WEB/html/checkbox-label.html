@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkbox1</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      div {
+        border: 2px solid #000;
+        padding: 10px;
+        margin: 10px;
+      }
+      div > p {
+        font-weight: bold;
+      }
+      div input[type="checkbox"],
+      div label {
+        cursor: pointer;
+      }
+      div label:hover {
+        color: red;
+        font-weight: bold;
+        background-color: rgb(247, 203, 147);
+      }
+      /* 태그 + id를 붙일 때는 div + # + id_name을 한다 */
+      div#sports label:hover {
+        color: blue;
+        font-weight: bold;
+      }
+
+      aside > span > input[type="checkbox"],
+      aside > span > label {
+        cursor: pointer;
+        /* background-color: chocolate;
+        border: 2px solid chartreuse;
+        padding: 10px; */
+      }
+
+      aside > span {
+        cursor: pointer;
+        border: 2px solid rgb(0, 162, 255);
+        /* background-color: chocolate; */
+        padding: 10px;
+        margin: 10px;
+        display: block;
+        width: 100px;
+      }
+
+      aside > span:hover {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- First -->
+    <div id="fruit">
+      <p>과일 체크박스-1 input + label</p>
+      <input type="checkbox" id="apple" />
+      <label for="apple">애플</label><br />
+      <input type="checkbox" id="orange" />
+      <label for="orange">오렌지</label><br />
+      <input type="checkbox" id="kiwi" />
+      <label for="kiwi">키위</label><br />
+    </div>
+    <!-- Second -->
+    <div id="sports">
+      <p>스포츠 체크박스-2 label &gt; input</p>
+      <label><input type="checkbox" /> 축구</label><br />
+      <label><input type="checkbox" /> 야구</label><br />
+      <label><input type="checkbox" /> 수영</label><br />
+      <label><input type="checkbox" /> 자전거</label><br />
+    </div>
+    <!-- Third -->
+    <aside style="padding: 10px">
+      <span>
+        <input type="checkbox" id="sunday" />
+        <label for="sunday">일요일</label>
+      </span>
+      <span>
+        <input type="checkbox" id="monday" />
+        <label for="monday">월요일</label><br
+      /></span>
+    </aside>
+  </body>
+</html>
