@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+div > .flex-loading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-loading div {
+  /* border: 1px solid #969696; */
+  display: inline-block;
+  margin: 10px;
+  /* width: 300px; */
+}

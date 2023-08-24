@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.loading-box {
+  position: relative;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+.loading-box > p {
+  position: absolute;
+  font-weight: bold;
+  color: rgb(105, 105, 105);
+  top: 50px;
+  left: 22px;
+}
+
+.loading-box > .loading-rect {
+  border: 1px solid orange;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* 초기값 셋팅 top,left-> 50% 이동 그러니 크기의 절반만큼 X,Y축으로 1/2 (-50%) 만큼 이동해 */
+  animation: loading-rotate-rect 2.5s infinite linear;
+}
+
+.loading-box > .loading-ellipse-1 {
+  border: 1px solid orange;
+  width: 85px;
+  height: 85px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: loading-rotate-rect 2s infinite linear;
+}
+
+.loading-box > .loading-ellipse-2 {
+  border: 1px solid orange;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: loading-rotate-rect 1.5s infinite linear;
+}
+
+@keyframes loading-rotate-rect {
+  /* 앞 50%는 진행률을 의미 */
+  /* 50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  } */
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
