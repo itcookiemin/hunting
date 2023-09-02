@@ -1,0 +1,9 @@
+.loading-box > p {
+  position: absolute;
+  font-weight: bold;
+  color: rgb(105, 105, 105);
+  /* top: 50px;
+  left: 22px; */
+  transform: translate(100%, 100%);
+  justify-content: center;
+}

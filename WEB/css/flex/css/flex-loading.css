@@ -4,11 +4,12 @@ div > .flex-loading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 100px;
 }
 
 .flex-loading div {
   /* border: 1px solid #969696; */
-  display: inline-block;
-  margin: 10px;
+  /* display: inline-block; */
+  /* margin: 50px; */
   /* width: 300px; */
 }

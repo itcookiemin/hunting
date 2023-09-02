@@ -8,12 +8,14 @@
   width: 100px;
   height: 100px;
 }
-.loading-box > p {
+.loading-box .loading-text {
   position: absolute;
   font-weight: bold;
   color: rgb(105, 105, 105);
-  top: 50px;
-  left: 22px;
+  /* top: 50px;
+  left: 22px; */
+  transform: translate(50%, 50%);
+  /* justify-content: center; */
 }
 
 .loading-box > .loading-rect {
@@ -23,10 +25,8 @@
   top: 50%;
   left: 50%;
   position: absolute;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* 초기값 셋팅 top,left-> 50% 이동 그러니 크기의 절반만큼 X,Y축으로 1/2 (-50%) 만큼 이동해 */
+  transform: translate(50%, 50%);
+  /* 초기값 셋팅 top,left-> 50% 이동 그러니 크기의 절반만큼 X,Y축으로 1/2 (-50%) 만큼 이동해 */
   animation: loading-rotate-rect 2.5s infinite linear;
 }
 
